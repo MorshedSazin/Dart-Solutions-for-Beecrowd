@@ -1,0 +1,16 @@
+import 'dart:io';
+
+double SalaryWithBonus(){
+
+String sellersName = stdin.readLineSync();
+double fixedSalary = double.parse(stdin.readLineSync());
+double extra15Percent = double.parse(stdin.readLineSync());
+double x = extra15Percent * (15 / 100);
+return (x + fixedSalary);
+
+}
+void main(){
+var z = SalaryWithBonus();
+print("TOTAL = R\$ ${z.toStringAsFixed(2)}");
+
+}
