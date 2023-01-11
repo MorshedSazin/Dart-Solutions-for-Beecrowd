@@ -1,0 +1,5 @@
+String helloWorld() => "Hello World!";
+
+void main(){
+print(helloWorld());
+}
