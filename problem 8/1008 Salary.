@@ -1,0 +1,14 @@
+import "dart:io";
+
+double Salary(){
+int employeesNumber =  int.parse(stdin.readLineSync());
+int  workedHours  =  int.parse(stdin.readLineSync());
+double amountRec =  double.parse(stdin.readLineSync());
+double total = (workedHours * amountRec);
+print("NUMBER = ${employeesNumber}");
+return total;
+}
+void main(){
+double totalSalary = Salary();
+print("SALARY = U\$ ${totalSalary.toStringAsFixed(2)}");
+}
