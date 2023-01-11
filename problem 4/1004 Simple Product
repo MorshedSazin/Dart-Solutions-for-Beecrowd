@@ -1,0 +1,11 @@
+import "dart:io";
+
+int addTowNumbers(){
+int A = int.parse(stdin.readLineSync());
+int B = int.parse(stdin.readLineSync());
+return (A * B);
+}
+void main(){
+int SUMA = addTowNumbers();
+print("PROD = ${SUMA}");
+}
