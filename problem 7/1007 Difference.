@@ -1,0 +1,14 @@
+import "dart:io";
+
+int Difference(){
+int A =  int.parse(stdin.readLineSync()!);
+int B =  int.parse(stdin.readLineSync()!);
+int C =  int.parse(stdin.readLineSync()!);
+int D =  int.parse(stdin.readLineSync()!);
+int average = (A * B) - (C * D);
+return average;
+}
+void main(){
+int total = Difference();
+print("DIFERENCA = ${total}");
+}
