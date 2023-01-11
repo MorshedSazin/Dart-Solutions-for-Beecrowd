@@ -1,0 +1,12 @@
+import 'dart:io';
+
+double calculateArea(){
+double pi = 3.14159;
+double R = double.parse(stdin.readLineSync());
+double r_square = (R * R);
+return (pi * r_square);
+}
+void main(){
+double areaOfCircle = calculateArea();
+print("A=${areaOfCircle.toStringAsFixed(4)}");
+}
