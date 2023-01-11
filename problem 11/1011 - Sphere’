@@ -1,0 +1,13 @@
+import 'dart:io';
+
+double Sphere() {
+double r = double.parse(stdin.readLineSync());
+double rCube = r * r * r;
+double pi =  3.14159;
+double calculates = ((4 / 3.00) * pi * rCube);
+return calculates;
+}
+
+void main() {
+print(" VOLUME = ${Sphere().toStringAsFixed(3)}");
+}
