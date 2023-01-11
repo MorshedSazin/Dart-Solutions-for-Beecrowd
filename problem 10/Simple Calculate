@@ -1,0 +1,20 @@
+import 'dart:io';
+
+double SimpleCalculate() {
+String product1 = stdin.readLineSync()!;
+String product2 = stdin.readLineSync()!;
+
+var product1List = product1.split(" ");
+var product2List = product2.split(" ");
+
+var product1TotalPrice =
+double.parse(product1List[1]) * double.parse(product1List[2]);
+var product2TotalPrice =
+double.parse(product2List[1]) * double.parse(product2List[2]);
+
+return product1TotalPrice + product2TotalPrice;
+}
+
+void main() {
+print("VALOR A PAGAR: R\$ ${SimpleCalculate().toStringAsFixed(2)}");
+}
