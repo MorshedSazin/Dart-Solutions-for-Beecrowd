@@ -1,0 +1,12 @@
+import "dart:io";
+
+double Average(){
+double A = 3.5 * double.parse(stdin.readLineSync());
+double B = 7.5 *double.parse(stdin.readLineSync());
+double average = (A + B) / (3.5 + 7.5);
+return average;
+}
+void main(){
+double media = Average();
+print("MEDIA = ${media.toStringAsFixed(5)}");
+}
