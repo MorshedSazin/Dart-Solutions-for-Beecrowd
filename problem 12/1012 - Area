@@ -1,0 +1,33 @@
+import 'dart:io';
+
+String Area() {
+String reads = stdin.readLineSync();
+var readAsList = reads.split(" ");
+
+// a) the area of the rectangled triangle that has base A and height C.
+double problemA =
+(double.parse(readAsList[0]) * double.parse(readAsList[2]) / 2);
+print("TRIANGULO: ${problemA.toStringAsFixed(3)}");
+
+// b) the area of the radius's circle C. (pi = 3.14159)
+double problemB =
+(double.parse(readAsList[2]) * double.parse(readAsList[2]) * 3.14159);
+print("CIRCULO: ${problemB.toStringAsFixed(3)}");
+
+// c) the area of the trapezium which has A and B by base, and C by height.
+double problemC = (0.5 *
+(double.parse(readAsList[0]) + double.parse(readAsList[1])) *
+double.parse(readAsList[2]));
+print("TRAPEZIO: ${problemC.toStringAsFixed(3)}");
+// d) the area of the square that has side B.
+double problemD = (double.parse(readAsList[1]) * double.parse(readAsList[1]));
+print("QUADRADO: ${problemD.toStringAsFixed(3)}");
+
+// e) the area of the rectangle that has sides A and B.
+double problemE = (double.parse(readAsList[0]) * double.parse(readAsList[1]));
+return ("RETANGULO: ${problemE.toStringAsFixed(3)}");
+}
+
+void main() {
+print(Area());
+}
