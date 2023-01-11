@@ -1,0 +1,14 @@
+import 'dart:io';
+
+int addTowNumbers(){
+int A = int.parse(stdin.readLineSync());
+int B = int.parse(stdin.readLineSync());
+int sum = (A + B);
+return sum;
+}
+
+void main()
+{
+int SUM = addTowNumbers();
+print("X = $SUM");
+}
