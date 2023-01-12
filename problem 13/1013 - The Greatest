@@ -1,0 +1,25 @@
+import 'dart:io';
+
+void main(){
+String reads = stdin.readLineSync()!;
+var readAsList = reads.split(" ");
+
+int a = int.parse(readAsList[0]);
+int b = int.parse(readAsList[1]);
+int c = int.parse(readAsList[2]);
+int maxValue = int.parse(readAsList[0]);
+
+if (a > b){
+maxValue = a;
+  if (c > a) {
+  maxValue = c;
+}}else if (b > c){
+maxValue = b;
+  if (b > a) {
+  maxValue = b;
+}}else if (c > a){
+maxValue = c;
+}
+
+print("${maxValue} eh o maior");
+}
