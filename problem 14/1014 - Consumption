@@ -1,0 +1,11 @@
+import 'dart:io';
+
+  double Consumption() {
+    int X = int.parse(stdin.readLineSync());
+    double Y = double.parse(stdin.readLineSync());
+    return (X / Y);
+  }
+
+  void main() {
+    print("${Consumption().toStringAsFixed(3)} km/l");
+  }
