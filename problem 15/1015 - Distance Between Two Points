@@ -1,0 +1,23 @@
+import 'dart:io';
+import 'dart:math';
+
+double DistanceBetweenTwoPoints() {
+String p1 = stdin.readLineSync();
+String p2 = stdin.readLineSync();
+
+var readAsList1 = p1.split(" ");
+var readAsList2 = p2.split(" ");
+
+double x1 = double.parse(readAsList1[0]);
+double x2 = double.parse(readAsList1[1]);
+
+double y1 = double.parse(readAsList2[0]);
+double y2 = double.parse(readAsList2[1]);
+
+double result = sqrt(pow(x1-y1,2) + pow(x2-y2,2));
+return result;
+}
+
+void main() {
+print("${DistanceBetweenTwoPoints().toStringAsFixed(4)}");
+}
