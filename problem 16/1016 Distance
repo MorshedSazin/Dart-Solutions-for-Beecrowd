@@ -1,0 +1,10 @@
+import 'dart:io';
+
+int Distance(){
+int y1 = int.parse(stdin.readLineSync());
+return (y1 * 2);
+}
+
+void main() {
+print("${Distance()} minutos");
+}
