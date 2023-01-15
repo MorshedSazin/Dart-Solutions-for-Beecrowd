@@ -1,0 +1,11 @@
+import 'dart:io';
+
+double FuelSpent(){
+int spentTime = int.parse(stdin.readLineSync());
+int averageSpeed = int.parse(stdin.readLineSync());
+return (spentTime * averageSpeed)/12;
+}
+void main()
+{
+print(FuelSpent().toStringAsFixed(3));
+}
