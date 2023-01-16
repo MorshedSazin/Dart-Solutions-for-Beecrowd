@@ -1,0 +1,20 @@
+import 'dart:io';
+
+void main() {
+// print(bankNote());
+int BankNote = int.parse(stdin.readLineSync());
+print(BankNote);
+print("${BankNote ~/ 100} nota(s) de R\$ 100,00");
+BankNote = BankNote % 100;
+print("${BankNote ~/ 50} nota(s) de R\$ 50,00");
+BankNote = BankNote % 50;
+print("${BankNote ~/ 20} nota(s) de R\$ 20,00");
+BankNote = BankNote % 20;
+print("${BankNote ~/ 10} nota(s) de R\$ 10,00");
+BankNote = BankNote % 10;
+print("${BankNote ~/ 5} nota(s) de R\$ 5,00");
+BankNote = BankNote % 5;
+print("${BankNote ~/ 2} nota(s) de R\$ 2,00");
+BankNote = BankNote % 2;
+print("${BankNote ~/ 1} nota(s) de R\$ 1,00");
+}
