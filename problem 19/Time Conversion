@@ -1,0 +1,14 @@
+import 'dart:io';
+
+void main() {
+int TimeConversion = int.parse(stdin.readLineSync());
+
+int hr = TimeConversion ~/ 3600;//0
+
+int min = TimeConversion % 3600;
+int minute = min ~/ 60;
+
+int sec = TimeConversion % 60;
+print("${hr}:${minute}:${sec}");
+
+}
