@@ -1,0 +1,14 @@
+import 'dart:io';
+
+void main() {
+int ageInDays = int.parse(stdin.readLineSync()!);
+
+print("${ageInDays ~/ 365} ano(s)");
+int month = ageInDays % 365;
+
+print("${month ~/ 30} mes(es)");
+int days = month % 30;
+
+print("${days} dia(s)");
+
+}
