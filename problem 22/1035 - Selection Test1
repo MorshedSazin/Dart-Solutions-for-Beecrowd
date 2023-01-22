@@ -1,0 +1,17 @@
+import "dart:io";
+
+void main() {
+  String x = stdin.readLineSync();
+  var num = x.split(" ");
+
+  int a = int.parse(num[0]);
+  int b = int.parse(num[1]);
+  int c = int.parse(num[2]);
+  int d = int.parse(num[3]);
+
+  if (b > c && d > a && c + d > a + b && c > 0 && d > 0 && a % 2 == 0) {
+    print("Valores aceitos");
+  } else {
+    print("Valores nao aceitos");
+  }
+}
