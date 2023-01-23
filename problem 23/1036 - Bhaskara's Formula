@@ -1,0 +1,26 @@
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+  String x = stdin.readLineSync();
+
+  var abc = x.split(" ");
+
+  var a = double.parse(abc[0]);
+  var b = double.parse(abc[1]);
+  var c = double.parse(abc[2]);
+
+  var q = ((b * b) - (4 * a * c));
+
+  var w = (-b + sqrt(q)) / (2 * a);
+  var e = (-b - sqrt(q)) / (2 * a);
+
+
+  if (a == 0) {
+    print("Impossivel calcular");
+  }else if(q<0){
+    print("Impossivel calcular");
+  }else{
+    print("R1 = ${w.toStringAsFixed(5)}\nR2 = ${e.toStringAsFixed(5)}");
+ }
+}
