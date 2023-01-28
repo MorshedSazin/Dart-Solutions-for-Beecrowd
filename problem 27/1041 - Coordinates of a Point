@@ -1,0 +1,28 @@
+import 'dart:io';
+
+void main(){
+   String num1 = stdin.readLineSync()!;
+  
+    var z = num1.split(" ");
+    double x = double.parse(z[0]);
+    double y = double.parse(z[1]);
+  
+   
+   if(x>0 && y>0){
+      print("Q1");
+   }else if(x<0 && y>0){
+     print("Q2");
+   }else if(x<0 && y < 0){
+     print("Q3");
+   }else if(x>0 && y < 0){
+     print("Q4");
+   }else{
+     if(x==0 && y==0){
+       print("Origem");
+     }else if(x == 0.0 && (y>0 || y<0)){  
+       print("Eixo Y");
+     }else if(y==0 && (x>0 || x<0)){
+       print("Eixo X");
+    }
+  }
+}
