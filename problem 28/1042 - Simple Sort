@@ -1,0 +1,36 @@
+import 'dart:io';
+
+void main() {
+  String num = stdin.readLineSync();
+
+  var readLine = num.split(" ");
+  int a = int.parse(readLine[0]);
+  int b = int.parse(readLine[1]);
+  int c = int.parse(readLine[2]);
+  int temp;
+  int x, y, z;
+
+  x = a;
+  y = b;
+  z = c;
+
+  if (x > y) {
+    temp = x;
+    x = y;
+    y = temp;
+  }
+  if (x > z) {
+    temp = x;
+    x = z;
+    z = temp;
+  }
+  if (y > z) {
+    temp = y;
+    y = z;
+    z = temp;
+  }
+  print("");
+  print("$x\n$y\n$z");
+  print("");
+  print("$a\n$b\n$c");
+}
