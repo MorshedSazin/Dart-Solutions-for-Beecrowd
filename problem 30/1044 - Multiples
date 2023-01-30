@@ -1,0 +1,17 @@
+import 'dart:io';
+
+void main(){
+  String num = stdin.readLineSync();
+  
+  var reeadline = num.split(" ");
+  int a = int.parse(reeadline[0]);
+  int b = int.parse(reeadline[1]);
+  int y, x;
+  
+  
+  if(b % a == 0 || a % b == 0){
+    print("Sao Multiplos");
+  }else{
+    print("Nao sao Multiplos");
+  }
+}
