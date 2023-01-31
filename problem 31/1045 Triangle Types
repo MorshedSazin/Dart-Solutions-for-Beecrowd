@@ -1,0 +1,41 @@
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+  String num = stdin.readLineSync();
+  var readLine = num.split(" ");
+
+  double a = double.parse(readLine[0]);
+  double b = double.parse(readLine[1]);
+  double c = double.parse(readLine[2]);
+  double x;
+  x = a;
+
+  if (a < b) {
+    a = b;
+    b = x;
+  }
+  if (a < c) {
+    x = a;
+    a = c;
+    c = x;
+  }
+  if (b < c) {
+    x = b;
+    b = c;
+    c = x;
+  }
+
+  if (a >= b + c) {
+    print("NAO FORMA TRIANGULO");
+  } else {
+    if (pow(a, 2) == pow(b, 2) + pow(c, 2)) print("TRIANGULO RETANGULO");
+    if (pow(a, 2) > pow(b, 2) + pow(c, 2)) print("TRIANGULO OBTUSANGULO");
+    if (pow(a, 2) < pow(b, 2) + pow(c, 2)) print("TRIANGULO ACUTANGULO");
+    if (a == b && a == c) {
+      print("TRIANGULO EQUILATERO");
+    } else if (a == b && a != c || b == c && c != a) {
+      print("TRIANGULO ISOSCELES");
+    }
+  }
+}
