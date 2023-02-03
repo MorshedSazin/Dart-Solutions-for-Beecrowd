@@ -1,0 +1,26 @@
+import 'dart:io';
+
+
+void main() {
+
+  String num = stdin.readLineSync();
+  var readLine = num.split(" ");
+  
+  int a = int.parse(readLine[0]);
+  int b = int.parse(readLine[1]);
+  int x;
+  x = a;
+  int c = (24-(a-b));
+
+  
+  if(a == 0 && a == b ){
+    print("O JOGO DUROU 24 HORA(S)");
+  }else if(b>a){
+    a = b;
+    b = x;
+      print("O JOGO DUROU ${a -b} HORA(S)");
+  }else{
+    print("O JOGO DUROU $c HORA(S)");
+    
+  }
+}
