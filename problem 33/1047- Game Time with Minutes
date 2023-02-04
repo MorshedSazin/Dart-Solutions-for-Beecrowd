@@ -1,0 +1,32 @@
+import 'dart:io';
+
+void main() {
+  String num = stdin.readLineSync()!;
+  var readLine = num.split(" ");
+
+  int a = int.parse(readLine[0]);
+  int b = int.parse(readLine[1]);
+  int c = int.parse(readLine[2]);
+  int d = int.parse(readLine[3]);
+
+  var sh = ((a * 60) + b);
+  var en = ((c * 60) + d);
+  var x = (en - sh);
+
+  int y = x ~/ 60;
+  var r = x % 60;
+
+  if (x == 0) {
+    int q = (24 - x);
+    print("O JOGO DUROU ${q.toStringAsFixed(0)} HORA(S) E ${x.toStringAsFixed(0)} MINUTO(S)");
+  }else {
+    if (sh > en) {
+      x = en - sh;
+      y = (x + 1440) ~/ 60;
+      var y1 = (x + 1440) % 60;
+      print("O JOGO DUROU ${y.toStringAsFixed(0)} HORA(S) E ${y1.toStringAsFixed(0)} MINUTO(S)");
+    }else {
+      print("O JOGO DUROU ${y.toStringAsFixed(0)} HORA(S) E ${r.toStringAsFixed(0)} MINUTO(S)");
+    }
+  }
+}
