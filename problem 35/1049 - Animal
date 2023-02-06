@@ -1,0 +1,37 @@
+import 'dart:io';
+
+void main() {
+  String importOne = stdin.readLineSync();
+  String importTwo = stdin.readLineSync();
+  String importThree = stdin.readLineSync();
+
+  if (importOne == "vertebrado") {
+    if (importTwo == "ave") {
+      if (importThree == "carnivoro") {
+        print("aguia");
+      } else if (importThree == "onivoro") {
+        print("pomba");
+      }
+    } else if (importTwo == "mamifero") {
+      if (importThree == "onivoro") {
+        print("homem");
+      } else if (importThree == "herbivoro") {
+        print("vaca");
+      }
+    }
+  } else if (importOne == "invertebrado") {
+    if (importTwo == "inseto") {
+      if (importThree == "hematofago") {
+        print("pulga");
+      } else if (importThree == "herbivoro") {
+        print("lagarta");
+      }
+    } else if (importTwo == "anelideo") {
+      if (importThree == "hematofago") {
+        print("sanguessuga");
+      } else if (importThree == "onivoro") {
+        print("minhoca");
+      }
+    }
+  }
+}
