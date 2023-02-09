@@ -1,0 +1,22 @@
+import "dart:io";
+
+void main() {
+  double salery = double.parse(stdin.readLineSync());
+  if (salery >= 0.00 && salery <= 2000.00) {
+    print("Isento");
+  } else if (salery > 2000.00 && salery <= 3000.00) {
+    salery = salery - 2000;
+    double tax = ((8 / 100) * salery);
+    print("R\$ ${tax.toStringAsFixed(2)}");
+  } else if (salery > 3000.00 && salery <= 4500.00) {
+    salery = salery - 3000;
+    if (salery > 0 && salery <= 1500) {
+      double tax = ((18 / 100) * salery) + 80;
+        print("R\$ ${tax.toStringAsFixed(2)}");
+      }
+    } else if (salery > 4500.00) {
+      salery = salery - 4500;
+      double tax = ((28 / 100) * salery) + 350;
+      print("R\$ ${tax.toStringAsFixed(2)}");
+    }
+  }
