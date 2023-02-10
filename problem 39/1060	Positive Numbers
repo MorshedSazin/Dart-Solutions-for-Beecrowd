@@ -1,0 +1,20 @@
+import 'dart:io';
+  
+  void main() {
+    var num0 = double.parse(stdin.readLineSync());
+    var num1 = double.parse(stdin.readLineSync());
+    var num2 = double.parse(stdin.readLineSync());
+    var num3 = double.parse(stdin.readLineSync());
+    var num4 = double.parse(stdin.readLineSync());
+    var num5 = double.parse(stdin.readLineSync());
+  
+    var list = [num0,num1,num2,num3,num4,num5,];
+    var x = 0;
+    for (var i in list) {
+      if(i>=0)
+        x++;
+       }
+    print("$x valores positivos");
+  
+    
+  }
