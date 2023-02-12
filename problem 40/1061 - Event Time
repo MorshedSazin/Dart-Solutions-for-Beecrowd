@@ -1,0 +1,35 @@
+import 'dart:io';
+
+int convertSec(String day, String time) {
+  var readLine2 = time.split(" : ");
+  int hour = int.parse(readLine2[0]);
+  int minuts = int.parse(readLine2[1]);
+  int sec = int.parse(readLine2[2]);
+  return (int.parse(day.split(" ")[1]) * 3600 * 24) +
+      (hour * 3600) +
+      (minuts * 60) +
+      sec;
+}
+
+void main() {
+  String w = stdin.readLineSync()!;
+  String x = stdin.readLineSync()!;
+
+  String y = stdin.readLineSync()!;
+  String z = stdin.readLineSync()!;
+
+  int finalTime = convertSec(y, z) - convertSec(w, x);
+
+  int days = finalTime ~/ 86400;
+  finalTime = finalTime % 86400;
+  int hours = finalTime ~/ 3600;
+  finalTime = finalTime % 3600;
+  int minutes = finalTime ~/ 60;
+  finalTime = finalTime % 60;
+  int sec = finalTime;
+
+  print("$days dia(s)");
+  print("$hours hora(s)");
+  print("$minutes minuto(s)");
+  print("$sec segundo(s)");
+}
