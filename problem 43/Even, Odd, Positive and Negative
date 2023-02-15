@@ -1,0 +1,44 @@
+import 'dart:io';
+
+void main() {
+  int num0 = int.parse(stdin.readLineSync());
+  int num1 = int.parse(stdin.readLineSync());
+  int num2 = int.parse(stdin.readLineSync());
+  int num3 = int.parse(stdin.readLineSync());
+  int num4 = int.parse(stdin.readLineSync());
+
+  var list = [
+    num0,
+    num1,
+    num2,
+    num3,
+    num4,
+  ];
+
+  int e = 0;
+  int o = 5;
+  int p = 0;
+  int n = 0;
+
+  for (var i in list) {
+    if (i % 2 == 0) {
+      e++;
+    }
+  }
+  for (var i in list) {
+    if (i > 0) {
+      p++;
+    }
+  }
+  for (var i in list) {
+    if (i < 0) {
+      n++;
+    }
+  }
+
+  o -= e;
+  print("$e valor(es) par(es)");
+  print("$o valor(es) impar(es)");
+  print("$p valor(es) positivo(s)");
+  print("$n valor(es) negativo(s)");
+}
