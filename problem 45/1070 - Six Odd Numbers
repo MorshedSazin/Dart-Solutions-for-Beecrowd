@@ -1,0 +1,21 @@
+import "dart:io";
+
+void main() {
+  int x = int.parse(stdin.readLineSync());
+
+  if (x % 2 == 0) {
+    int a = x + 12;
+    for (var i = x; i < a; i = i + 1) {
+      if (i % 2 != 0) {
+        print(i);
+      }
+    }
+  } else {
+    int a = x + 12;
+    for (var i = x; i < a; i++) {
+      if (i % 2 != 0) {
+        print(i);
+      }
+    }
+  }
+}
