@@ -1,0 +1,19 @@
+//note : this solution is a wrong answer. but  its works.
+import "dart:io";
+int calculate(){
+  int x = int.parse(stdin.readLineSync()!);
+  int y = int.parse(stdin.readLineSync()!);
+  
+  if(x >= y){
+      int a = 0; 
+    for(var i = y; i<x; i++){
+      if(i%2 != 0){
+        a+=i;
+      }
+    } print(a);
+  }
+  return 0;
+}
+void main(){
+calculate();
+}
