@@ -1,0 +1,14 @@
+import "dart:io";
+void main(){
+  int i; int a = 0; int b = 0;
+
+  int t = int.parse(stdin.readLineSync());
+  for(i = 0; i < t; i++){
+    int x = int.parse(stdin.readLineSync());
+
+    if(x >= 10 && x <=20) a++;
+    else b++;
+
+    }
+    print("$a in\n$b out");
+  }
