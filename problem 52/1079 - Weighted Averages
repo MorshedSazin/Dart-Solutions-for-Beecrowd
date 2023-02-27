@@ -1,0 +1,16 @@
+import 'dart:io';
+
+void main() {
+  int n = int.parse(stdin.readLineSync());
+
+  for (int i = 0; i < n; i++) {
+    String readLine = stdin.readLineSync();
+    dynamic num = readLine.split(" ");
+    dynamic num1 = 2 * double.parse(num[0]);
+    dynamic num2 = 3 * double.parse(num[1]);
+    dynamic num3 = 5 * double.parse(num[2]);
+
+    dynamic average = ((num1 + num2 + num3) / (2 + 3 + 5));
+    print(average.toStringAsFixed(1));
+  }
+}
