@@ -1,0 +1,16 @@
+import 'dart:io';
+
+void main() {
+  int x = 0;
+  int y = 0;
+
+  for (int i = 1; i <= 5; i++) {
+    int n = int.parse(stdin.readLineSync()!);
+    if (n > x) {
+      x = n;
+      y = i;
+    }
+  }
+  print(x);
+  print(y);
+}
