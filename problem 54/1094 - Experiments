@@ -1,0 +1,44 @@
+import 'dart:io';
+
+void main() {
+  
+  int x = 0;
+  int y = 0;
+  int z = 0;
+  double xPercent;
+  double yPercent;
+  double zPercent;
+  int i = 0;
+  int total = 0;
+  int value = 0;
+  String name = "";
+
+  int count = int.parse(stdin.readLineSync());
+  for (i = 0; i < count; i++) {
+    String readLine = stdin.readLineSync();
+    var splited = readLine.split(" ");
+    value = int.parse(splited[0]);
+    name = splited[1];
+    total += value;
+
+    if (name == "C") {
+      x += value;
+    } else if (name == "R") {
+      y += value;
+    } else if (name == "S") {
+      z += value;
+    }
+  }
+  xPercent = (x / total) * 100;
+  yPercent = (y / total) * 100;
+  zPercent = (z / total) * 100;
+
+  print("Total: $total cobaias");
+  print("Total de coelhos: $x");
+  print("Total de ratos: $y");
+  print("Total de sapos: $z");
+
+  print("Percentual de coelhos: ${xPercent.toStringAsFixed(2)} %");
+  print("Percentual de ratos: ${yPercent.toStringAsFixed(2)} %");
+  print("Percentual de sapos: ${zPercent.toStringAsFixed(2)} %");
+}
