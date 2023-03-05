@@ -1,0 +1,17 @@
+void main() {
+  double j = 0;
+  double z = 3;
+  for (double i = 0; i <= 2; i += 0.2) {
+    for (double j = i + 1; j <= z; j++) {
+      if (j == 1 || j == 2 || j == 3 || j == 4 || j == 5) {
+        print(
+            "I=${i.toStringAsFixed(0).toString()} J=${j.toStringAsFixed(0).toString()}");
+      } else {
+        print(
+            "I=${i.toStringAsFixed(1).toString()} J=${j.toStringAsFixed(1).toString()}");
+      }
+    }
+    j += 0.2;
+    z += 0.2;
+  }
+}
