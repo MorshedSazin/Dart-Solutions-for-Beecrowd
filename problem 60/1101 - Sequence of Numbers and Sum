@@ -1,0 +1,32 @@
+import 'dart:io';
+
+//1 return type, 2 name, 3 (parameter) 4.{body and return} 5 return.
+
+ sumOfConsecutiveOdd() {
+  for(int i= 0;i==i;i++){
+  List<int> testCase = stdin.readLineSync().split(' ').map(int.parse).toList();
+  int x = testCase[0];
+  int y = testCase[1];
+  if(x <= 0 || y <=0)
+    return;
+
+  int min = 0;
+  int max = 0;
+  if(x>y){
+    max=x;
+    min=y;
+  }else{
+    max=y;
+    min=x;
+  }
+  int sum = 0;
+  for(int j = min; j <= max; j++){
+      sum += j;
+      stdout.write("$j ");
+    }
+print("Sum=$sum");
+  }
+} 
+void main() {
+  sumOfConsecutiveOdd();
+}
