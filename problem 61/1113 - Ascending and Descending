@@ -1,0 +1,19 @@
+import 'dart:io';
+
+AscendingAndDescending() {
+  for (int i = 0; i == i; i++) {
+    List<int> readLine =
+        stdin.readLineSync().split(" ").map(int.parse).toList();
+    readLine[0];
+    readLine[1];
+    if (readLine[0] == readLine[1]) return;
+    if (readLine[0] > readLine[1])
+      print("Decrescente");
+    else
+      print("Crescente");
+  }
+}
+
+void main() {
+  AscendingAndDescending();
+}
