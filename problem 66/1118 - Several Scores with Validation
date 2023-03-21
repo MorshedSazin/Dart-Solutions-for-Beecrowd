@@ -1,0 +1,26 @@
+import 'dart:io';
+
+void main() {
+  int validCount = 0;
+  double valid = 0;
+  while (true) {
+    double readLine = double.parse(stdin.readLineSync());
+    if (readLine >= 0 && readLine <= 10) {
+      valid += readLine;
+      validCount++;
+      if (validCount % 2 == 0) {
+        print("media = ${(valid / 2).toStringAsFixed(2)}");
+        valid -= valid;
+        while (validCount % 2 == 0 && validCount > 1) {
+          print("novo calculo (1-sim 2-nao)");
+          int x = int.parse(stdin.readLineSync());
+          if (x == 1)
+            break;
+          else if (x == 2) return;
+        }
+      }
+    } else {
+      print("nota invalida");
+    }
+  }
+}
