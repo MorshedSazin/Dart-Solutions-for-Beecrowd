@@ -1,0 +1,36 @@
+import 'dart:io';
+
+void main() {
+  int validCount = 0;
+  int validCountForInter = 0;
+  int validCountGremio = 0;
+  int empates = 0;
+  String win = "";
+  while (true) {
+    List<int> readLine =
+        stdin.readLineSync().split(" ").map(int.parse).toList();
+    int inter = readLine[0];
+    int gremio = readLine[1];
+    validCount++;
+    print("Novo grenal (1-sim 2-nao)");
+
+    while (true) {
+      if (inter > gremio) {
+        validCountForInter++;
+        win = "Inter venceu mais";
+      } else if (gremio > inter) {
+        validCountGremio++;
+        win = "Gremio venceu mais";
+      } else {
+        empates++;
+        win = "Não houve vencedor";
+      }
+      int x = int.parse(stdin.readLineSync());
+      if (x == 1)
+        break;
+      else
+        return print(
+            "${validCount} grenais\nInter:${validCountForInter}\nGremio:$validCountGremio\nEmpates:$empates\n$win");
+    }
+  }
+}
