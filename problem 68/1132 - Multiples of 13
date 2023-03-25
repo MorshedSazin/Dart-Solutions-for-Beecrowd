@@ -1,0 +1,23 @@
+import 'dart:io';
+
+void main() {
+  int sum = 0;
+  int max = 0;
+  int min = 0;
+  int readLine1 = int.parse(stdin.readLineSync());
+  int readLine2 = int.parse(stdin.readLineSync());
+
+  if (readLine2 >= readLine1) {
+    max = readLine2;
+    min = readLine1;
+  } else {
+    max = readLine1;
+    min = readLine2;
+  }
+  for (min; min <= max; min++) {
+    if (min % 13 != 0) {
+      sum += min;
+    }
+  }
+  print("${sum}");
+}
