@@ -1,0 +1,22 @@
+import 'dart:io';
+
+void main() {
+  int max = 0;
+  int min = 0;
+  int readLine1 = int.parse(stdin.readLineSync());
+  int readLine2 = int.parse(stdin.readLineSync());
+
+  if (readLine1 > readLine2) {
+    max = readLine1;
+    min = readLine2;
+  } else {
+    max = readLine2;
+    min = readLine1;
+  }
+
+  for (int j = min + 1; j < max; j++) {
+    if (j % 5 == 2 || j % 5 == 3) {
+      print(j);
+    }
+  }
+}
