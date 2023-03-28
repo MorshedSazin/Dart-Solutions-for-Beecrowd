@@ -1,0 +1,14 @@
+import 'dart:io';
+
+int a = 1;
+int b = 2;
+int c = 3;
+int n = int.parse(stdin.readLineSync());
+void main() {
+  for (int i = 1; i <= n; i++) {
+    print("$a $b $c PUM");
+    a += 4;
+    b += 4;
+    c += 4;
+  }
+}
