@@ -1,0 +1,21 @@
+import 'dart:io';
+
+int Alcool = 0;
+int Gasolina = 0;
+int Diesel = 0;
+void main() {
+  while (true) {
+    int fuekType = int.parse(stdin.readLineSync());
+    if (fuekType == 1) {
+      Alcool++;
+    } else if (fuekType == 2) {
+      Gasolina++;
+    } else if (fuekType == 3) {
+      Diesel++;
+    } else if (fuekType == 4) {
+      break;
+    }
+  }
+  print(
+      "MUITO OBRIGADO\nAlcool: $Alcool\nGasolina: $Gasolina\nDiesel: $Diesel");
+}
