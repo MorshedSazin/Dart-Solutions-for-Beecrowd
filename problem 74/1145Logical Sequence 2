@@ -1,0 +1,16 @@
+import 'dart:io';
+
+void main() {
+  String readLine = stdin.readLineSync();
+  dynamic numbers = readLine.split(" ");
+  int x = int.parse(numbers[0]);
+  int y = int.parse(numbers[1]);
+
+  for (int a = 1; a <= y; a++) {
+    if (a % x == 0) {
+      stdout.write("$a\n");
+    } else {
+      stdout.write("$a ");
+    }
+  }
+}
