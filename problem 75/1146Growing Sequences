@@ -1,0 +1,16 @@
+import 'dart:io';
+//Time Limite Exceeded
+int x = 1;
+void main() {
+  while (true) {
+    int readLine = int.parse(stdin.readLineSync());
+    if (readLine == 0) break;
+    for (int a = 1; a <= readLine; a++) {
+      if (a == readLine) {
+        stdout.write("$a\n");
+      } else {
+        stdout.write("$a ");
+      }
+    }
+  }
+}
