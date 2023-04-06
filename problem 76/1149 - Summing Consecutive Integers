@@ -1,0 +1,18 @@
+import 'dart:io';
+
+void main() {
+  List<int> readLine = stdin.readLineSync().split(" ").map(int.parse).toList();
+  int lastIndex = readLine.length - 1;
+  int sum = 0;
+  while (true) {
+    if (readLine[lastIndex] <= 0) {
+      readLine[lastIndex] = int.parse(stdin.readLineSync());
+    } else {
+      for (int i = readLine[0]; i < readLine[lastIndex] + readLine[0]; i++) {
+        sum += i;
+      }
+      print("$sum");
+      break;
+    }
+  }
+}
