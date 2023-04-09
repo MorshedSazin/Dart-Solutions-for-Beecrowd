@@ -1,0 +1,13 @@
+import "dart:io";
+
+void main() {
+  int readLine = int.parse(stdin.readLineSync());
+  int a = 0;
+  int b = 1;
+  for (int i = 0; i < readLine; i++) {
+    (i == readLine - 1) ? stdout.write("$a\n") : stdout.write("$a ");
+    int sum = a + b;
+    a = b;
+    b = sum;
+  }
+}
