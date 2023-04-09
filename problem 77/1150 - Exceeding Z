@@ -1,0 +1,21 @@
+import 'dart:io';
+
+void main() {
+  int x = int.parse(stdin.readLineSync());
+  int z = int.parse(stdin.readLineSync());
+  int a = 1;
+  int c = 0;
+  while (z <= x) {
+    z = int.parse(stdin.readLineSync());
+  }
+
+  while (true) {
+    c += x;
+
+    if (c > z) break;
+    a++;
+    x++;
+  }
+
+  print(a);
+}
