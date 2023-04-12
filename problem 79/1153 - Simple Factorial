@@ -1,0 +1,15 @@
+import "dart:io";
+
+
+  dynamic Factorial = (int readLine) {
+    int sum = 1;
+  for (readLine; readLine >= 1; readLine--) {
+    sum *= readLine;
+  }
+  print(sum);
+};
+
+void main() {
+  int readLine = int.parse(stdin.readLineSync());
+  Factorial(readLine);
+}
