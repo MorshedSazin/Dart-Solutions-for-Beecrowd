@@ -1,0 +1,19 @@
+import 'dart:io';
+
+void main() {
+  int count = 0;
+  int individualAge = int.parse(stdin.readLineSync());
+  int sum = 0;
+  while (true) {
+    if (individualAge < 0)
+      break;
+    else if (individualAge == 0) {
+      individualAge = int.parse(stdin.readLineSync());
+    } else {
+      sum += individualAge;
+      count++;
+    }
+    individualAge = int.parse(stdin.readLineSync());
+  }
+  print("${(sum / count).toStringAsFixed(2)}");
+}
