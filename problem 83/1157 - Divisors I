@@ -1,0 +1,12 @@
+import 'dart:io';
+
+void main() {
+  int n = 1;
+  int number = int.parse(stdin.readLineSync()!);
+  while (n <= number) {
+    if (number % n == 0) {
+      print(n);
+    }
+    n++;
+  }
+}
