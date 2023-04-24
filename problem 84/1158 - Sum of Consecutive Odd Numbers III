@@ -1,0 +1,20 @@
+import 'dart:io';
+
+void main() {
+  int testCases = int.parse(stdin.readLineSync());
+  int j = 0;
+  while (j < testCases) {
+    List<int> readLine =
+        stdin.readLineSync().split(" ").map(int.parse).toList();
+
+    if (readLine[0] % 2 == 0) {
+      readLine[0] += 1;
+    }
+    int sum = readLine[0];
+    for (int i = 1; i < readLine[1]; i++) {
+      sum += (readLine[0] += 2);
+    }
+    print(sum);
+    j++;
+  }
+}
