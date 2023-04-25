@@ -1,0 +1,17 @@
+import 'dart:io';
+
+void main() {
+  int readLine = int.parse(stdin.readLineSync());
+
+  while (readLine < 0 || readLine > 0) {
+    if (readLine % 2 != 0) {
+      readLine += 1;
+    }
+    int sum = readLine;
+    for (int i = 1; i < 5; i++) {
+      sum += (readLine += 2);
+    }
+    print(sum);
+    readLine = int.parse(stdin.readLineSync());
+  }
+}
