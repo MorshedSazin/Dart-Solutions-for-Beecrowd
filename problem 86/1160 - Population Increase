@@ -1,0 +1,31 @@
+// ignore: file_names
+
+
+// it won't gonna work. there is a problem with language
+import 'dart:io';
+
+void main() {
+  int testCase = int.parse(stdin.readLineSync());
+  int j = 0;
+  while (j < testCase) {
+    int years = 0;
+    String inpurt = stdin.readLineSync();
+    var readLine = inpurt.split(" ");
+    double pa = double.parse(readLine[0]);
+    double pb = double.parse(readLine[1]);
+    double g1 = double.parse(readLine[2]);
+    double g2 = double.parse(readLine[3]);
+
+    while (pb >= pa) {
+      years++;
+      pa += ((pa / 100) * g1).floor();
+      pb += ((pb / 100) * g2).floor();
+    }
+    if (years <= 100) {
+      print("$years anos.");
+    } else {
+      print("Mais de 1 seculo.");
+    }
+    j++;
+  }
+}
