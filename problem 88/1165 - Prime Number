@@ -1,0 +1,28 @@
+import "dart:io";
+void main(){
+  int testCase = int.parse(stdin.readLineSync());
+  int j = 1;
+  int count = 1;
+
+  while(testCase>j){
+    int readLine = int.parse(stdin.readLineSync());
+    if(readLine==4){
+      print("$readLine nao eh primo");
+      continue;
+    }
+    
+    for(int i = 3; i<readLine;i++){
+    if(readLine % i == 0){
+      count++;
+      break;
+    }
+   }
+  
+    if(count > 1){print("$readLine nao eh primo");
+    }else{print("$readLine eh primo");
+    }
+    count=1;
+   j++;
+  }
+
+}
