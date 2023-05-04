@@ -1,0 +1,15 @@
+import "dart:io";
+void main(){
+  int count = -1;
+  while(true){
+    count++;
+    if(count==10)break;
+  List<int> readLine = [int.parse(stdin.readLineSync())];
+  for( int i in readLine){
+    if(i<1){
+      i=1;
+    }
+    print("X[$count] = $i");
+  }
+  }
+}
