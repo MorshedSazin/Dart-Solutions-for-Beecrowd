@@ -1,0 +1,10 @@
+import "dart:io";
+void main(){
+  int count = -1;
+  List<int> readLine = [int.parse(stdin.readLineSync())];
+  while(count<9){
+    count++;
+      print("N[$count] = ${readLine[0]}");
+      readLine[0]+=readLine[0];
+    }
+  }
