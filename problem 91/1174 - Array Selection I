@@ -1,0 +1,11 @@
+import "dart:io";
+void main(){
+  int count = -1;
+  while(count<99){
+     List<double> readLine = [double.parse(stdin.readLineSync())];
+    count++;
+    if(readLine[0]<=10){
+      print("A[$count] = ${readLine[0].toStringAsFixed(1)}");
+    }
+  }
+}
