@@ -4,7 +4,7 @@ Morshed Sazin<br/>
 
 ---
 
-<p>Hello there. welcome to my repo. here you'll find some of begginar problem's solituion for beecowed.</p>
+<p>Hello there. welcome to my repo. here you'll find some of begginar problem's solutions for beecowed.</p>
 
 <!-- ![profile](./me.png) -->
 <img src="./me.png" width="400" title="profile image"/>
@@ -17,6 +17,6 @@ nano (problem name)
 
 | Name         | Email                  |
 | ------------ | ---------------------- |
-| Facebook | facebook.com/morshedsazin          |
+| Facebook | https://www.facebook.com/MorshedSazin/          |
 | linkdin  | https://www.linkedin.com/in/morshed-sazin-8743821b8/ |
 | mail     | morshedsazin@gmail.com           |
