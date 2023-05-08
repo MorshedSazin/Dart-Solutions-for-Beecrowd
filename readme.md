@@ -4,7 +4,7 @@ Morshed Sazin<br/>
 
 ---
 
-<p>Hello there. welcome to my repo. here you'll find some of begginar problem's solutions for beecowed.</p>
+<p>Hello there. welcome to my repo. here you'll find some of begginar solutions for beecowed.</p>
 
 <!-- ![profile](./me.png) -->
 <img src="./me.png" width="400" title="profile image"/>
