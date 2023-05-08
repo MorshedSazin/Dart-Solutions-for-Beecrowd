@@ -15,7 +15,7 @@ cd /Dart-Solutions-for-Beecrowd/All problems
 nano (problem name)
 ```
 
-| Name         | Email                  |
+| media        | address                  |
 | ------------ | ---------------------- |
 | Facebook | https://www.facebook.com/MorshedSazin/          |
 | linkdin  | https://www.linkedin.com/in/morshed-sazin-8743821b8/ |
