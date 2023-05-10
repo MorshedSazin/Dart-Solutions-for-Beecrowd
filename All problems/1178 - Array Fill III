@@ -1,0 +1,13 @@
+ 
+import 'dart:io';
+void main() {
+//there is a problem with the languace so this will not work.
+  double readLine = double.parse(stdin.readLineSync()!);
+  List<double> list = [];
+
+  for (int i = 0; i < 100; i++) {
+    print("N[$i] = ${readLine.toStringAsFixed(4)}");
+    list.add(readLine);
+    readLine = readLine / 2;
+  }
+}
