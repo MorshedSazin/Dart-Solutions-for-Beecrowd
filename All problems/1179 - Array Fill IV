@@ -1,0 +1,44 @@
+import 'dart:io';
+
+void main(){
+  int count = 0, i = 0, j = 0;
+  List<int> even = [];
+  List<int> odd = [];
+
+  while(count<15){
+    int readLine = int.parse(stdin.readLineSync());
+
+    if(readLine%2 != 0) {
+        odd.add(readLine);
+        if(odd.length==5){
+          for(int odd in odd){
+            print("impar[$j] = $odd");
+            j++;
+          }
+          j=0;odd.length = 0;
+        }
+      }else{
+        even.add(readLine);
+        if(even.length == 5){
+          for(int even in even){
+            print("par[$i] = $even");
+            i++;
+          }
+          i=0;even.length = 0;
+        }
+        
+    } count++;
+  }
+  if(odd.isNotEmpty){
+    for(int odd in odd){
+      print("impar[$j] = $odd");
+      j++;
+    } 
+  }
+  if(even.isNotEmpty){
+    for(int even in even){
+      print("par[$i] = $even");
+      i++;
+    } 
+  }
+}
