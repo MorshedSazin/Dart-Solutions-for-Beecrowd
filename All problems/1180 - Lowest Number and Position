@@ -1,0 +1,19 @@
+1import "dart:io";
+void main(){
+  int position = int.parse(stdin.readLineSync());
+  List<int> readLine = stdin.readLineSync().split(RegExp(r'\s+')).map(int.parse).toList();
+    for(int i = 1;i < readLine.length;i++){
+    if(readLine[i] < readLine[0]){
+      readLine[0] = readLine[i];
+      position = i;
+    }
+  } 
+  if(position==readLine.length){
+    position=0;
+  }
+  print("Menor valor: ${readLine[0]}");
+  print("Posicao: $position");
+  
+}
+
+
