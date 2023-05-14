@@ -1,0 +1,45 @@
+// ignore_for_file: non_constant_identifier_names, unused_local_variable, unused_import, avoid_print
+
+import 'dart:io';
+import 'dart:math';
+
+gcdEuclidean(int a, int b) {
+  int x = b == 0 ? a : gcdEuclidean(b, a % b);
+  return x;
+}
+
+void rational(int testCase, int count) {
+  while (testCase > count) {
+    List<String> input = stdin.readLineSync()!.split(" ");
+    int N1 = int.parse(input[0]);
+    int D1 = int.parse(input[2]);
+    String op = input[3];
+    int N2 = int.parse(input[4]);
+    int D2 = int.parse(input[6]);
+
+    List<int> result = [];
+
+    if (op == "+") {
+      result.add(N1 * D2 + N2 * D1);
+      result.add(D1 * D2);
+    } else if (op == "-") {
+      result.add(N1 * D2 - N2 * D1);
+      result.add(D1 * D2);
+    } else if (op == "*") {
+      result.add(N1 * N2);
+      result.add(D1 * D2);
+    } else {
+      result.add(N1 * D2);
+      result.add(N2 * D1);
+    }
+
+    int gcd = gcdEuclidean(result[0], result[1]);
+    print(
+        "${result[0]}/${result[1]} = ${result[0] ~/= gcd}/${result[1] ~/= gcd}");
+    count++;
+  }
+}
+
+void main() {
+  var result = rational(int.parse(stdin.readLineSync()!), 0);
+}
