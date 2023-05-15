@@ -1,0 +1,27 @@
+import 'dart:io';
+void main(){
+  int i = 0;
+  
+String character = stdin.readLineSync();
+
+  List<List<double>> list = [];
+  for(i; i < 12; i++){
+     List<double> row = [];
+    for(int j = 0;j < 12; j++){
+      String readLine = stdin.readLineSync();
+      var toSplit = readLine.split(RegExp(r'\s+'));
+      row.add(double.parse(toSplit[0]));
+    }
+    list.add(row);
+  }
+  double sum = 0;
+  int n=1;
+  for(int r = 0; r < 12; r++){
+  for (int c = n; c < 12; c++) {
+      sum += list[c][r];
+    }
+    n++;
+  }
+  character == "S"? sum:sum/=66;
+  print(sum.toStringAsFixed(1));
+}
